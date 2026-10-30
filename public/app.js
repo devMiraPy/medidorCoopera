@@ -165,15 +165,14 @@ function toast(msg, tipo = '') {
 
 (function initTheme() {
   const saved = localStorage.getItem('coopera-theme');
-  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-  const theme = saved || (prefersDark ? 'dark' : 'light');
-  if (theme === 'dark') document.documentElement.setAttribute('data-theme', 'dark');
+  const theme = saved || 'dark';
+  document.documentElement.setAttribute('data-theme', theme);
 
   const toggle = document.getElementById('theme-toggle');
   toggle?.addEventListener('click', () => {
     const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
     if (isDark) {
-      document.documentElement.removeAttribute('data-theme');
+      document.documentElement.setAttribute('data-theme', 'light');
       localStorage.setItem('coopera-theme', 'light');
     } else {
       document.documentElement.setAttribute('data-theme', 'dark');
