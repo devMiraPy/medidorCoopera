@@ -640,10 +640,10 @@ p { margin: 0 0 1em; }
   letter-spacing: .1em;
   text-transform: uppercase;
 }
-.light-beam { animation: sweep 2.5s linear infinite; }
+.light-beam { animation: sweep 6s ease-in-out infinite; }
 @keyframes sweep {
-  from { transform: translateX(0); }
-  to { transform: translateX(500px); }
+  0%, 18% { transform: translateX(0); }
+  48%, 100% { transform: translateX(500px); }
 }
 
 .section-alt {
