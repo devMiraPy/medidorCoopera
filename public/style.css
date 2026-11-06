@@ -1,4 +1,4 @@
-﻿
+
 :root {
   --amber-50:#fdf6e8;
   --amber-100:#fbefd6;
@@ -605,7 +605,8 @@ p { margin: 0 0 1em; }
 .hero-interactions {
   display: flex;
   justify-content: center;
-  margin-top: 32px;
+  width: 100%;
+  margin-top: 20px;
 }
 .solar-panel-btn {
   display: flex;
@@ -622,13 +623,14 @@ p { margin: 0 0 1em; }
   color: #fff;
 }
 .solar-panel-svg {
-  width: 100px;
-  height: 60px;
-  filter: drop-shadow(0 10px 20px rgba(255, 106, 0, .2));
+  width: min(360px, 78vw);
+  height: auto;
+  aspect-ratio: 16 / 9;
+  filter: drop-shadow(0 12px 28px rgba(59, 177, 232, .38));
 }
 .solar-panel-svg svg { width: 100%; height: 100%; }
 .solar-panel-btn:hover .solar-panel-svg {
-  filter: drop-shadow(0 10px 20px rgba(255, 106, 0, .6));
+  filter: drop-shadow(0 14px 32px rgba(59, 177, 232, .7));
 }
 .solar-panel-btn span {
   color: inherit;
@@ -641,7 +643,7 @@ p { margin: 0 0 1em; }
 .light-beam { animation: sweep 2.5s linear infinite; }
 @keyframes sweep {
   from { transform: translateX(0); }
-  to { transform: translateX(200px); }
+  to { transform: translateX(500px); }
 }
 
 .section-alt {
