@@ -55,8 +55,8 @@ export function initShader() {
       float gradient = smoothstep(0.1, 0.8, st.x + st.y + (n1 * 0.5) + (n2 * 0.3));
       
       // Mistura das cores
-      vec3 color = mix(color2, color1, gradient); // Preto para Laranja Vermelho
-      color = mix(color, color3, smoothstep(0.5, 1.0, gradient) * n2); // Toque de Laranja Queimado
+      vec3 color = mix(color2, color1, gradient); // Preto para amarelo
+      color = mix(color, color3, smoothstep(0.5, 1.0, gradient) * n2); // Toque de amarelo-limão
       
       // Adiciona o grão (grain) da imagem original
       float grain = fract(sin(dot(st.xy, vec2(12.9898,78.233))) * 43758.5453);
@@ -71,9 +71,9 @@ export function initShader() {
     fragmentShader,
     uniforms: {
       uTime: { value: 0 },
-      color1: { value: new THREE.Color('#0b0b0b') }, // Ember Orange
+      color1: { value: new THREE.Color('#d8db35') }, // Amarelo-limão
       color2: { value: new THREE.Color('#000000') }, // Preto profundo
-      color3: { value: new THREE.Color('#e96a02') }, // Laranja Secundário
+      color3: { value: new THREE.Color('#c0c910') }, // Amarelo secundário
     }
   });
 
